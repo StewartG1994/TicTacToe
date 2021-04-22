@@ -11,9 +11,9 @@ var gameBoard = (function() {
       console.log(playerOne.counter)
       console.log(playerTwo.counter)
       console.log(playerTwo.turn)
-
     const playerArray = [];
-
+    const playerArrayOne = [];
+    const playerArrayTwo = []
 
     const winningSequences = 
     [
@@ -27,36 +27,31 @@ var gameBoard = (function() {
         [2,4,6]
     ]
 
-    const counterPlacer = x => {
+    const counterPlacer = () => {
         const boxes = document.querySelectorAll('.grid')
         boxes.forEach(boxes  => boxes.addEventListener('click', event =>{
             
             if (playerOne.turn === true)
             {boxes.textContent = playerOne.counter;
              playerOne.turn = false;
-             playerTwo.turn = true;     
+             playerTwo.turn = true;
+              playerArrayOne.push(event.target.id);    
             }
 
             else if (playerTwo.turn === true )
             {boxes.textContent = playerTwo.counter;
             playerTwo.turn = false;
-            playerOne.turn = true;}
-           ;
+            playerOne.turn = true;
+        playerArrayTwo.push(event.target.id)}
 
-            playerArray.push(event.target.id)
         }
-  
         )
         )}
+ 
+        console.log(playerArrayOne);
+        console.log(playerArrayTwo);
 
-        const splicePlayerArray = x =>{
-        }
-        
         counterPlacer()
-        splicePlayerArray()
-
-    
-        console.log(playerArray)
-
-
   })();
+
+
