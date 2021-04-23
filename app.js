@@ -5,13 +5,15 @@ var gameBoard = (function() {
         const sayHello = () => console.log('hello!');
         return { name, counter, turn, sayHello };
       };
+
       const playerOne = personFactory('Player One', 'x' , true)
       const playerTwo = personFactory('Player Two', 'o' , false)
 
       console.log(playerOne.counter)
       console.log(playerTwo.counter)
       console.log(playerTwo.turn)
-    const playerArray = [];
+
+
     const playerArrayOne = [];
     const playerArrayTwo = []
 
@@ -47,9 +49,22 @@ var gameBoard = (function() {
         }
         )
         )}
- 
-        console.log(playerArrayOne);
-        console.log(playerArrayTwo);
+
+    const arrayMatch = () => {
+        let winNums = winningSequences;
+        let playerOneNums = playerArrayOne;
+        let playerTwoNums = playerArrayTwo;
+        winNums.forEach (item => {
+            console.log(item)
+            if(item === playerOneNums)
+            {alert ( 'you have won')}
+                
+        });
+
+           console.log(playerOneNums, playerTwoNums)
+    }
+
+        arrayMatch()
 
         counterPlacer()
   })();
