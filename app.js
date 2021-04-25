@@ -9,11 +9,6 @@ var gameBoard = (function() {
       const playerOne = personFactory('Player One', 'x' , true)
       const playerTwo = personFactory('Player Two', 'o' , false)
 
-      console.log(playerOne.counter)
-      console.log(playerTwo.counter)
-      console.log(playerTwo.turn)
-
-
     const playerArrayOne = [];
     const playerArrayTwo = []
 
@@ -51,22 +46,27 @@ var gameBoard = (function() {
         )}
 
     const arrayMatch = () => {
-        let winNums = winningSequences;
-        let playerOneNums = playerArrayOne;
-        let playerTwoNums = playerArrayTwo;
-        winNums.forEach (item => {
-            console.log(item)
-            if(item === playerOneNums)
-            {alert ( 'you have won')}
-                
-        });
 
-           console.log(playerOneNums, playerTwoNums)
+        var myStringArray = winningSequences;
+        var playerOne = playerArrayOne;
+        var playerTwo = playerArrayTwo;
+        let test = playerOne.toString();
+        console.log(test)
+        var arrayLength = myStringArray.length;
+    for (var i = 0; i < arrayLength; i++) { let winningNumbers = myStringArray[i];
+
+        console.log({winningNumbers, playerOne,playerTwo})
+        console.log(winningNumbers === playerOne)
+
+
     }
 
-        arrayMatch()
+}
 
-        counterPlacer()
+
+    counterPlacer()
+    arrayMatch()
   })();
+
 
 
