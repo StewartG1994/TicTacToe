@@ -9,9 +9,10 @@ var gameBoard = (function() {
       const playerOne = personFactory('Player One', 'x' , true)
       const playerTwo = personFactory('Player Two', 'o' , false)
 
-    const playerArrayOne = [];
-    const playerArrayTwo = []
-
+    const playerArrayOne = [[]];
+    const playerArrayTwo = [];
+    console.log(playerArrayOne);
+    
     const winningSequences = 
     [
         [0,1,2],
@@ -45,27 +46,31 @@ var gameBoard = (function() {
         )
         )}
 
+
+    
     const arrayMatch = () => {
 
         var myStringArray = winningSequences;
         var playerOne = playerArrayOne;
         var playerTwo = playerArrayTwo;
-        let test = playerOne.toString();
-        console.log(test)
-        var arrayLength = myStringArray.length;
-    for (var i = 0; i < arrayLength; i++) { let winningNumbers = myStringArray[i];
 
-        console.log({winningNumbers, playerOne,playerTwo})
-        console.log(winningNumbers === playerOne)
+          var arrayLength = myStringArray.length;
+
+    for (var i = 0; i < arrayLength; i++) { let winningNumbers = myStringArray[i];
+        console.log(winningNumbers)
+      // console.log(winningNumbers.slice(0-3))
+      // console.log(playerOne.map(Number))
+      // console.log({winningNumbers, playerOne ,playerTwo})
+
 
 
     }
-
+  
 }
-
 
     counterPlacer()
     arrayMatch()
+
   })();
 
 
