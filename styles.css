@@ -1,0 +1,52 @@
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.header{
+    text-align:center;
+    font-size: 45px;
+    
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.gridGame {
+    display: grid;
+    grid-gap: 1px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+.grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #393E46;
+    width: 150px;
+    height: 150px;
+    color : #EEEEEE;
+    font-size: 75px;
+    text-align: center;
+
+  }
+
+  .grid:hover{
+      background-color: #222831;
+  }
+
+  .win{
+      text-align: center;
+      margin-top: 20px;
+      color: green;
+      font-size: 30px;
+    
+  }
+
+  .leftPanel .rightPanel {
+      background-color: antiquewhite;
+  }
