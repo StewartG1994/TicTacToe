@@ -1,5 +1,6 @@
 body{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #EEEEEE;
 }
 
 .header{
@@ -18,11 +19,13 @@ body{
 
 .gridGame {
     display: grid;
-    grid-gap: 1px;
+    grid-gap: 3px;
     grid-template-columns: repeat(3, 1fr);
+    flex :1;
   }
   
 .grid {
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -47,6 +50,54 @@ body{
     
   }
 
-  .leftPanel .rightPanel {
-      background-color: antiquewhite;
+  .leftPanel {
+flex:1;
+      display: flex;
+      flex-direction:column;
+      justify-content: baseline;
+      gap:10px;
+      align-self: flex-start;
+
+  }
+
+  .rightPanel{
+      flex: 1;
+      text-align: center;
+  }
+
+  input[type=text]{
+      width: 80%;
+      border: none;
+      border-bottom: 2px solid #222831;
+      background-color: #EEEEEE;
+      margin:10px;
+      
+    
+  }
+
+  input[type=submit]{
+      width : 80%;
+      background-color: #EEEEEE;
+      border: 2px solid #222831;
+      border-radius: 3px;
+      margin:10px;
+      padding: 5px;
+  }
+
+  input[type=submit]:hover{
+      color:#393E46;
+      border :3px solid #393E46;
+  }
+
+  input[type=submit]:focus{
+      outline:none;
+  }
+
+  input[type=text]:focus{
+      outline:none;
+  }
+
+  .leftPanel > p{
+      width: 80%;
+      margin: 10px;
   }
